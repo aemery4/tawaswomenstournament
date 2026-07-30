@@ -84,9 +84,9 @@
     <div class="eyebrow">55th Annual · Sept 12–13, 2026</div>
     <h1>Register your team</h1>
     <p class="intro">Tell us a little about your team and we'll be in touch with payment details to lock you onto the official list. Takes about a minute.</p>
-    <div class="feechip">⏱ Early-bird fee is $275 through June 30</div>
+    <div class="feechip">⏱ Entry fee is $300 — rises to $325 on Aug 1</div>
 
-    <form id="reg-form">
+    <form id="reg-form" action="https://formsubmit.co/f49d71f553207d16925b70bf58477c51" method="POST">
       <div class="field">
         <label for="team">Team name <span class="req">*</span></label>
         <input type="text" id="team" name="Team name" required autocomplete="organization">
@@ -122,23 +122,13 @@
       <input type="hidden" name="_subject" value="🥎 New Tawas 2026 team registration">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://tawaswomenstournament.com/thanks">
       <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <button type="submit" class="btn green" id="submit-btn" style="width:100%;padding:15px">Send registration</button>
       <p class="form-note">We only use your info to run the tournament — no spam, ever. Prefer email? Write us at <a href="mailto:tawassoftballtourney@gmail.com?subject=Tawas%202026%20%E2%80%94%20Team%20Registration">tawassoftballtourney@gmail.com</a>.</p>
     </form>
 
-    <div class="alert err" id="err">
-      Hmm, that didn't go through. Please email us directly at <a href="mailto:tawassoftballtourney@gmail.com?subject=Tawas%202026%20%E2%80%94%20Team%20Registration">tawassoftballtourney@gmail.com</a> and we'll get you on the list.
-    </div>
-
-    <div class="alert ok" id="ok" style="display:none">
-      <div class="eyebrow">You're on the list 🎉</div>
-      <h2>Thanks — we've got it!</h2>
-      <p>We'll reach out at the email you gave us with payment details and lock your team in. Can't wait to see you in September.</p>
-      <p style="margin-bottom:0">— Ashley, tournament director</p>
-      <p style="margin-top:18px"><a class="btn" href="index.html">← Back to home</a></p>
-    </div>
   </div>
 </main>
 
@@ -149,38 +139,5 @@
   </div>
 </footer>
 
-<script>
-  var form = document.getElementById('reg-form');
-  var btn = document.getElementById('submit-btn');
-  var ok = document.getElementById('ok');
-  var err = document.getElementById('err');
-  // FormSubmit private alias for tawassoftballtourney@gmail.com (keeps the address out of page source)
-  var ENDPOINT = 'https://formsubmit.co/ajax/f49d71f553207d16925b70bf58477c51';
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if (form._honey.value) return;            // bot trap
-    err.style.display = 'none';
-    btn.disabled = true; btn.textContent = 'Sending…';
-    fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    })
-    .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {ok:r.ok, j:j}; }); })
-    .then(function(res){
-      var success = res.ok && (res.j.success === true || res.j.success === 'true');
-      if (success) {
-        form.style.display = 'none';
-        ok.style.display = 'block';
-        ok.scrollIntoView({behavior:'smooth', block:'center'});
-      } else { throw new Error('not ok'); }
-    })
-    .catch(function(){
-      err.style.display = 'block';
-      btn.disabled = false; btn.textContent = 'Send registration';
-    });
-  });
-</script>
 </body>
 </html>
