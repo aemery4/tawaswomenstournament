@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hot Pitches — Cabin Weekend Signup</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Private cabin signup for the Hot Pitches team — Timberlane Resorts, Sept 11–13, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1f6b43; --green-dk:#154a2e; --gold:#e0a93b; --gold-dk:#c8902a;
+    --cream:#faf6ee; --paper:#fffdf8; --ink:#20271f; --muted:#5d6b59; --line:#e6ddc9;
+    --shadow:0 10px 30px rgba(20,40,25,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Oswald",Impact,sans-serif;font-weight:600;line-height:1.1;margin:0 0 .4em}
+  a{color:var(--green)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:13px;font-weight:600;color:var(--gold-dk)}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(21,74,46,.96);backdrop-filter:blur(6px);color:#fff}
+  header.nav .wrap{max-width:1120px;display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:"Anton",Impact,sans-serif;font-size:21px;letter-spacing:.04em;color:#fff;text-decoration:none;text-transform:uppercase;display:flex;align-items:center;gap:9px}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--gold)}
+  header.nav .home{color:#eaf3ec;text-decoration:none;font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.04em;font-size:15px}
+
+  .hero{background:linear-gradient(rgba(20,40,25,.55),rgba(20,40,25,.72)),url("images/lodging.jpg") center/cover;color:#fff;padding:56px 0 48px;text-align:center}
+  .hero h1{font-family:"Anton",Impact,sans-serif;font-weight:400;font-size:clamp(34px,6vw,54px);text-transform:uppercase;color:#fff;margin-bottom:.15em}
+  .hero .sub{font-size:18px;color:#f3ecdd;max-width:520px;margin:0 auto}
+
+  main{padding:44px 0 80px}
+  .lead{color:var(--muted);font-size:18px;margin:0 0 30px}
+
+  .price-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 14px}
+  @media(max-width:520px){ .price-row{grid-template-columns:1fr} }
+  .price{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+  .price .tier{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--gold-dk);font-weight:600}
+  .price .amt{font-family:"Anton",sans-serif;font-size:40px;color:var(--green-dk);line-height:1}
+  .price .amt small{font-family:"Oswald",sans-serif;font-size:15px;color:var(--muted);font-weight:500}
+  .price .note{font-size:14px;color:var(--muted);margin-top:4px}
+  .atcost{font-size:14px;color:var(--muted);background:#fbf3dd;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;margin-bottom:30px}
+
+  h2{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:22px;color:var(--green-dk);margin:34px 0 14px}
+  .cabin{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow)}
+  .cabin h3{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:18px;color:var(--green-dk);margin:0 0 2px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .cabin h3 .tag{font-size:12px;letter-spacing:.04em;color:#fff;background:var(--green);border-radius:999px;padding:3px 10px;font-weight:600;white-space:nowrap}
+  .cabin h3 .tag.open{background:var(--gold);color:#3a2a06}
+  .cabin p{margin:6px 0 0;font-size:15px;color:var(--muted)}
+  .cabin .beds{font-size:14px;color:var(--ink);margin-top:6px}
+
+  .venmo{background:#e7f6ec;border:1px solid var(--green);border-radius:14px;padding:18px 20px;margin:26px 0 8px}
+  .venmo b{color:var(--green-dk)}
+  .venmo a{font-weight:600}
+
+  form{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);margin-top:14px}
+  .field{margin-bottom:18px}
+  .field.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+  @media(max-width:520px){ .field.row2{grid-template-columns:1fr} }
+  label{display:block;font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.04em;font-size:14px;margin-bottom:6px;color:var(--ink)}
+  label .req{color:#c0392b}
+  label .hint{text-transform:none;letter-spacing:0;color:var(--muted);font-weight:400;font-size:13px}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(31,107,67,.15)}
+  textarea{min-height:80px;resize:vertical}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .form-note{font-size:13px;color:var(--muted);margin-top:14px}
+
+  .calc{background:#fbf3dd;border:1px solid var(--gold);border-radius:12px;padding:16px 18px;margin:2px 0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .calc .lbl{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:14px;color:var(--gold-dk);font-weight:600}
+  .calc .tot{font-family:"Anton",sans-serif;font-size:30px;color:var(--green-dk);line-height:1}
+
+  footer{background:var(--ink);color:#c9d3c6;padding:34px 0;text-align:center;font-size:14px;margin-top:40px}
+  footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span>Hot Pitches</a>
+    <a class="home" href="index.html">Tournament site →</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold)">Team cabin weekend</div>
+    <h1>Timberlane Resorts</h1>
+    <p class="sub">Fri–Sun, September 11–13 · lakeside cabins in East Tawas · two nights right by the field.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <p class="lead">We've got three cabins on the lake for tournament weekend. Grab a spot below, and I'll slot everyone in. Here's what it runs per person for the whole weekend (both nights):</p>
+
+    <div class="price-row">
+      <div class="price">
+        <div class="tier">A room</div>
+        <div class="amt">$90 <small>/ person</small></div>
+        <div class="note">A real bedroom with a door — King, Queen, or Double.</div>
+      </div>
+      <div class="price">
+        <div class="tier">A bed / spot</div>
+        <div class="amt">$60 <small>/ person</small></div>
+        <div class="note">A spot in the loft, a sleeper sofa, or a fold-out. Kids too.</div>
+      </div>
+    </div>
+    <div class="atcost">💚 <b>This is at-cost.</b> It just splits what Timberlane charges us for the weekend — no markup. The refundable damage deposit isn't included; I'll cover that.</div>
+
+    <h2>The cabins</h2>
+
+    <div class="cabin">
+      <h3>Oak <span class="tag open">2 rooms open</span></h3>
+      <p>Our home base — the big one. A/C, 3 bathrooms, jacuzzi tub, screened porch. Most of it is spoken for (my crew + the kids), but there are <b>two Queen bedrooms still open</b> if you want to be with us.</p>
+      <div class="beds">King · 3 Queens · loft &amp; twin sleepers</div>
+    </div>
+
+    <div class="cabin">
+      <h3>Aspen <span class="tag">room to spare</span></h3>
+      <p>Screened porch, dishwasher, fireplace. A good mix of a private room or a bed if you're flexible.</p>
+      <div class="beds">Queen · Double · twin-bed room · fold-out · loft (Double + 2 singles)</div>
+    </div>
+
+    <div class="cabin">
+      <h3>Cedar <span class="tag">quiet + pet-free</span></h3>
+      <p>The cozy one — calmer and a little tucked away, nice if you've got littles or just want quiet. <b>Pet-free cabin</b>, so no dogs here.</p>
+      <div class="beds">2 Double bedrooms · double sleeper sofa</div>
+    </div>
+
+    <div class="venmo">
+      <b>To lock your spot:</b> Venmo me once you know your total — <a href="https://venmo.com/u/Ashley-Emery4" target="_blank" rel="noopener">venmo.com/u/Ashley-Emery4</a>. Just put <b>your name + "Tawas cabins"</b> in the note. Fill out the form first so I know where to put you.
+    </div>
+
+    <h2>Sign up</h2>
+    <form id="cabin-form" action="https://formsubmit.co/f49d71f553207d16925b70bf58477c51" method="POST">
+      <div class="field">
+        <label for="name">Your name <span class="req">*</span></label>
+        <input type="text" id="name" name="Name" required autocomplete="name">
+      </div>
+
+      <div class="field row2">
+        <div>
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="Email" required autocomplete="email">
+        </div>
+        <div>
+          <label for="phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" name="Phone" required autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="group">Who's with you? <span class="hint">— names, and ages of any kids</span></label>
+        <textarea id="group" name="Group" placeholder="e.g. me + my partner, and our two kids (7 &amp; 9)"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="cabin">Cabin preference</label>
+        <select id="cabin" name="Cabin preference">
+          <option value="No preference">No preference — put me where it works</option>
+          <option value="Oak">Oak (with the crew)</option>
+          <option value="Aspen">Aspen</option>
+          <option value="Cedar">Cedar (quiet / pet-free)</option>
+        </select>
+      </div>
+
+      <div class="field row2">
+        <div>
+          <label for="rooms">People in a private room <span class="hint">($90 each)</span></label>
+          <input type="number" id="rooms" name="Private-room people" min="0" step="1" value="0" inputmode="numeric">
+        </div>
+        <div>
+          <label for="beds">People in a bed / spot <span class="hint">— incl. kids ($60 each)</span></label>
+          <input type="number" id="beds" name="Bed/spot people" min="0" step="1" value="0" inputmode="numeric">
+        </div>
+      </div>
+
+      <div class="calc">
+        <span class="lbl">Your total for the weekend</span>
+        <span class="tot" id="total">$0</span>
+      </div>
+
+      <div class="field">
+        <label for="dog">Bringing a dog? <span class="hint">— note: no dogs in Cedar</span></label>
+        <select id="dog" name="Bringing a dog?">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="notes">Anything else? <span class="hint">(optional)</span></label>
+        <textarea id="notes" name="Notes" placeholder="Who you'd like to bunk near, arrival time, questions…"></textarea>
+      </div>
+
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="🏡 Hot Pitches cabin signup">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://tawaswomenstournament.com/cabins-thanks">
+      <input type="hidden" name="Estimated total" id="total-field" value="$0">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <button type="submit" class="brand" style="width:100%;padding:15px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:16px;cursor:pointer">Send my spot</button>
+      <p class="form-note">This just goes to me (Ashley). Questions? Text me or email <a href="mailto:tawassoftballtourney@gmail.com?subject=Tawas%20cabins">tawassoftballtourney@gmail.com</a>.</p>
+    </form>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Hot Pitches · Timberlane Resorts · Sept 11–13, 2026<br>
+    Private team page · <a href="mailto:tawassoftballtourney@gmail.com">tawassoftballtourney@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var r=document.getElementById('rooms'),b=document.getElementById('beds'),
+        out=document.getElementById('total'),hid=document.getElementById('total-field');
+    function calc(){
+      var rooms=Math.max(0,parseInt(r.value,10)||0),
+          beds=Math.max(0,parseInt(b.value,10)||0),
+          t=rooms*90+beds*60;
+      out.textContent='$'+t;
+      hid.value='$'+t;
+    }
+    r.addEventListener('input',calc);
+    b.addEventListener('input',calc);
+    calc();
+  })();
+</script>
+</body>
+</html>
