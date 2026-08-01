@@ -29,7 +29,7 @@
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--gold)}
   header.nav .home{color:#eaf3ec;text-decoration:none;font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.04em;font-size:15px}
 
-  .hero{background:linear-gradient(rgba(20,40,25,.55),rgba(20,40,25,.72)),url("images/lodging.jpg") center/cover;color:#fff;padding:56px 0 48px;text-align:center}
+  .hero{background:linear-gradient(rgba(20,40,25,.42),rgba(20,40,25,.66)),url("images/lake-view.jpg") center/cover;color:#fff;padding:56px 0 48px;text-align:center}
   .hero h1{font-family:"Anton",Impact,sans-serif;font-weight:400;font-size:clamp(34px,6vw,54px);text-transform:uppercase;color:#fff;margin-bottom:.15em}
   .hero .sub{font-size:18px;color:#f3ecdd;max-width:520px;margin:0 auto}
 
@@ -52,6 +52,10 @@
   .cabin h3 .tag.open{background:var(--gold);color:#3a2a06}
   .cabin p{margin:6px 0 0;font-size:15px;color:var(--muted)}
   .cabin .beds{font-size:14px;color:var(--ink);margin-top:6px}
+  .roster{list-style:none;margin:12px 0 0;padding:12px 0 0;border-top:1px dashed var(--line)}
+  .roster li{font-size:14px;color:var(--ink);padding:3px 0;display:flex;gap:8px}
+  .roster li .rm{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:12px;color:var(--muted);min-width:118px;flex:0 0 118px}
+  .roster li .who .open{color:var(--gold-dk);font-weight:600}
 
   .venmo{background:#e7f6ec;border:1px solid var(--green);border-radius:14px;padding:18px 20px;margin:26px 0 8px}
   .venmo b{color:var(--green-dk)}
@@ -111,26 +115,39 @@
         <div class="note">A spot in the loft, a sleeper sofa, or a fold-out. Kids too.</div>
       </div>
     </div>
-    <div class="atcost">💚 <b>This is at-cost.</b> It just splits what Timberlane charges us for the weekend — no markup. The refundable damage deposit isn't included; I'll cover that.</div>
-
     <h2>The cabins</h2>
 
     <div class="cabin">
       <h3>Oak <span class="tag open">2 rooms open</span></h3>
-      <p>Our home base — the big one. A/C, 3 bathrooms, jacuzzi tub, screened porch. Most of it is spoken for (my crew + the kids), but there are <b>two Queen bedrooms still open</b> if you want to be with us.</p>
+      <p>Our home base — the big one. A/C, 3 bathrooms, jacuzzi tub, screened porch. Most of it's spoken for (my crew + the kids), but there are <b>two Queen bedrooms still open</b> if you want to be with us.</p>
       <div class="beds">King · 3 Queens · loft &amp; twin sleepers</div>
+      <ul class="roster">
+        <li><span class="rm">King room</span><span class="who">Ashley &amp; Britt</span></li>
+        <li><span class="rm">Queen room</span><span class="who">Katie</span></li>
+        <li><span class="rm">Loft &amp; twins</span><span class="who">Wyatt, Ellie, Mischa &amp; Walker</span></li>
+        <li><span class="rm">Queen room</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Queen room</span><span class="who"><span class="open">open</span></span></li>
+      </ul>
     </div>
 
     <div class="cabin">
-      <h3>Aspen <span class="tag">room to spare</span></h3>
-      <p>Screened porch, dishwasher, fireplace. A good mix of a private room or a bed if you're flexible.</p>
+      <h3>Aspen <span class="tag">team hangout</span></h3>
+      <p>This is where we all gather — the central hangout for the whole crew. Screened porch, dishwasher, fireplace. Come hang here even if you're sleeping in another cabin. Still plenty of room to stay, too.</p>
       <div class="beds">Queen · Double · twin-bed room · fold-out · loft (Double + 2 singles)</div>
+      <ul class="roster">
+        <li><span class="rm">Queen room</span><span class="who">Beth &amp; Jonnie</span></li>
+        <li><span class="rm">Twin-bed room</span><span class="who">Steff</span></li>
+        <li><span class="rm">Rest of cabin</span><span class="who"><span class="open">open</span> — Double, fold-out &amp; loft</span></li>
+      </ul>
     </div>
 
     <div class="cabin">
       <h3>Cedar <span class="tag">quiet + pet-free</span></h3>
       <p>The cozy one — calmer and a little tucked away, nice if you've got littles or just want quiet. <b>Pet-free cabin</b>, so no dogs here.</p>
       <div class="beds">2 Double bedrooms · double sleeper sofa</div>
+      <ul class="roster">
+        <li><span class="rm">Whole cabin</span><span class="who"><span class="open">open</span> — 2 Double rooms &amp; a sleeper</span></li>
+      </ul>
     </div>
 
     <div class="venmo">
