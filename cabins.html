@@ -105,18 +105,18 @@
 
 <main>
   <div class="wrap">
-    <p class="lead">We've got three cabins on the lake for tournament weekend. Grab a spot below, and I'll slot everyone in. Here's what it runs per person for the whole weekend (both nights):</p>
+    <p class="lead">We've got three cabins on the lake for tournament weekend. Grab a spot below, and I'll slot everyone in. It's a flat share of the cabins for both nights — same for everyone, wherever you sleep:</p>
 
     <div class="price-row">
       <div class="price">
-        <div class="tier">A room</div>
-        <div class="amt">$90 <small>/ person</small></div>
-        <div class="note">A real bedroom with a door — King, Queen, or Double.</div>
+        <div class="tier">Per adult</div>
+        <div class="amt">$100 <small>/ weekend</small></div>
+        <div class="note">Your share of the cabins for both nights — same for everyone.</div>
       </div>
       <div class="price">
-        <div class="tier">A bed / spot</div>
-        <div class="amt">$60 <small>/ person</small></div>
-        <div class="note">A spot in the loft, a sleeper sofa, or a fold-out. Kids too.</div>
+        <div class="tier">Per kid</div>
+        <div class="amt">$50 <small>/ weekend</small></div>
+        <div class="note">Half price for kids 12 &amp; under.</div>
       </div>
     </div>
     <h2>The cabins</h2>
@@ -196,12 +196,12 @@
 
       <div class="field row2">
         <div>
-          <label for="rooms">People in a private room <span class="hint">($90 each)</span></label>
-          <input type="number" id="rooms" name="Private-room people" min="0" step="1" value="0" inputmode="numeric">
+          <label for="adults">Adults <span class="hint">($100 each)</span></label>
+          <input type="number" id="adults" name="Adults" min="0" step="1" value="0" inputmode="numeric">
         </div>
         <div>
-          <label for="beds">People in a bed / spot <span class="hint">— incl. kids ($60 each)</span></label>
-          <input type="number" id="beds" name="Bed/spot people" min="0" step="1" value="0" inputmode="numeric">
+          <label for="kids">Kids <span class="hint">— 12 &amp; under ($50 each)</span></label>
+          <input type="number" id="kids" name="Kids" min="0" step="1" value="0" inputmode="numeric">
         </div>
       </div>
 
@@ -249,38 +249,37 @@
 
 <script>
   (function(){
-    var r=document.getElementById('rooms'),b=document.getElementById('beds'),
+    var a=document.getElementById('adults'),k=document.getElementById('kids'),
         out=document.getElementById('total'),hid=document.getElementById('total-field'),
         cabinSel=document.getElementById('cabin'),dogSel=document.getElementById('dog'),
         form=document.getElementById('cabin-form'),errBox=document.getElementById('cap-err');
 
-    // Open spots per cabin — people that still fit. KEEP IN SYNC WITH THE ROSTERS ABOVE.
-    // rooms = people that fit in still-open bedrooms; beds = open shared bed/spots.
+    // Open capacity per cabin — total people that still fit. KEEP IN SYNC WITH THE ROSTERS ABOVE.
     var CAP={
-      Oak:  {rooms:4, beds:0, petOk:true},   // 2 open Queens; loft & twins taken by the kids
-      Aspen:{rooms:4, beds:5, petOk:true},   // Double + twin room open; loft & fold-out (Steff has one)
-      Cedar:{rooms:4, beds:2, petOk:false}   // 2 open Doubles + sleeper sofa; pet-free
+      Oak:  {spots:4, petOk:true},   // 2 open Queens (loft & twins taken by the kids)
+      Aspen:{spots:9, petOk:true},   // Double + twin room + loft & fold-out (Steff has one spot)
+      Cedar:{spots:6, petOk:false}   // 2 open Doubles + sleeper sofa; pet-free
     };
 
     function ival(el){return Math.max(0,parseInt(el.value,10)||0);}
     function calc(){
-      var t=ival(r)*90+ival(b)*60;
+      var t=ival(a)*100+ival(k)*50;
       out.textContent='$'+t; hid.value='$'+t;
     }
-    r.addEventListener('input',calc);
-    b.addEventListener('input',calc);
+    a.addEventListener('input',calc);
+    k.addEventListener('input',calc);
     calc();
 
     function clearErr(){errBox.hidden=true;errBox.innerHTML='';}
-    r.addEventListener('input',clearErr);
-    b.addEventListener('input',clearErr);
+    a.addEventListener('input',clearErr);
+    k.addEventListener('input',clearErr);
     cabinSel.addEventListener('change',clearErr);
     dogSel.addEventListener('change',clearErr);
 
     form.addEventListener('submit',function(e){
-      var cabin=cabinSel.value, rooms=ival(r), beds=ival(b), dog=(dogSel.value==='Yes'), msgs=[];
+      var cabin=cabinSel.value, people=ival(a)+ival(k), dog=(dogSel.value==='Yes'), msgs=[];
 
-      if(rooms+beds<1){
+      if(people<1){
         msgs.push('Add at least one person so I know who to expect.');
       }
       var c=CAP[cabin];
@@ -288,15 +287,10 @@
         if(!c.petOk && dog){
           msgs.push(cabin+' is pet-free — pick Oak or Aspen if you’re bringing a dog.');
         }
-        if(rooms>c.rooms){
-          msgs.push(c.rooms===0
-            ? cabin+' has no open bedrooms left — choose a bed/spot, or pick another cabin.'
-            : cabin+' only has room for '+c.rooms+' more in a bedroom — trim the private-room count, or pick another cabin.');
-        }
-        if(beds>c.beds){
-          msgs.push(c.beds===0
-            ? cabin+'’s shared beds are all taken — choose a bedroom, or pick another cabin.'
-            : cabin+' only has '+c.beds+' shared bed/spot'+(c.beds===1?'':'s')+' left — trim the bed/spot count, or pick another cabin.');
+        if(people>c.spots){
+          msgs.push(c.spots===0
+            ? cabin+' is full — pick another cabin, or choose “No preference.”'
+            : cabin+' only has room for '+c.spots+' more '+(c.spots===1?'person':'people')+' — trim the count, or pick another cabin.');
         }
       }
 
