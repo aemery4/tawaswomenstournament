@@ -61,6 +61,15 @@
   .venmo b{color:var(--green-dk)}
   .venmo a{font-weight:600}
 
+  .feecard{background:#fbf3dd;border:1px solid var(--gold);border-radius:14px;padding:20px 22px;margin:8px 0}
+  .feecard p{margin:0 0 10px;font-size:15px;color:var(--ink)}
+  .feecard p:last-child{margin-bottom:0}
+  .feecard b{color:var(--green-dk)}
+  .feecard a{font-weight:600}
+  .feecard .fee-amt{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:15px;color:var(--muted);display:flex;align-items:center;gap:10px}
+  .feecard .fee-amt .tbd{font-family:"Anton",sans-serif;font-size:30px;letter-spacing:.02em;color:var(--gold-dk);line-height:1}
+  .feecard .fee-note{font-size:14px;color:var(--muted)}
+
   form{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);margin-top:14px}
   .field{margin-bottom:18px}
   .field.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
@@ -105,13 +114,13 @@
 
 <main>
   <div class="wrap">
-    <p class="lead">We've got three cabins on the lake for tournament weekend. Grab a spot below, and I'll slot everyone in. It's a flat share of the cabins for both nights — same for everyone, wherever you sleep:</p>
+    <p class="lead">We've got three cabins on the lake for tournament weekend. Grab a spot below, and I'll slot everyone in. Here's your share of the cabins for both nights:</p>
 
     <div class="price-row">
       <div class="price">
         <div class="tier">Per adult</div>
         <div class="amt">$100 <small>/ weekend</small></div>
-        <div class="note">Your share of the cabins for both nights — same for everyone.</div>
+        <div class="note">Your share of the cabins for both nights.</div>
       </div>
       <div class="price">
         <div class="tier">Per kid</div>
@@ -236,6 +245,13 @@
       <button type="submit" class="brand" style="width:100%;padding:15px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:16px;cursor:pointer">Send my spot</button>
       <p class="form-note">This just goes to me (Ashley). Questions? Text me or email <a href="mailto:tawassoftballtourney@gmail.com?subject=Tawas%20cabins">tawassoftballtourney@gmail.com</a>.</p>
     </form>
+
+    <h2>Team player fee</h2>
+    <div class="feecard">
+      <p>Separate from the cabins — this is our <b>tournament entry fee</b>, what gets Hot Pitches on the field. Our team fee is <b>$275</b>, split across everyone playing.</p>
+      <p class="fee-amt">Your share: <span class="tbd">TBD</span></p>
+      <p class="fee-note">I'll lock the per-player amount once we know our final roster, then it's a quick Venmo to <a href="https://venmo.com/u/Ashley-Emery4" target="_blank" rel="noopener">Ashley</a> — note <b>your name + "player fee"</b> (keep it separate from your cabin payment).</p>
+    </div>
 
   </div>
 </main>
