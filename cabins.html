@@ -131,15 +131,15 @@
     <h2>The cabins</h2>
 
     <div class="cabin">
-      <h3>Oak <span class="tag open">2 rooms open</span></h3>
-      <p>Our home base — the big one. A/C, 3 bathrooms, jacuzzi tub, screened porch. Most of it's spoken for (my crew + the kids), but there are <b>two Queen bedrooms still open</b> if you want to be with us.</p>
+      <h3>Oak <span class="tag">full</span></h3>
+      <p>Our home base — the big one. A/C, 3 bathrooms, jacuzzi tub, screened porch. This one's <b>full now</b> — my crew, the kids, and Alex &amp; Amy's family.</p>
       <div class="beds">King · 3 Queens · loft &amp; twin sleepers</div>
       <ul class="roster">
         <li><span class="rm">King room</span><span class="who">Ashley &amp; Britt</span></li>
         <li><span class="rm">Queen room</span><span class="who">Katie</span></li>
         <li><span class="rm">Loft &amp; twins</span><span class="who">Wyatt, Ellie, Mischa &amp; Walker</span></li>
-        <li><span class="rm">Queen room</span><span class="who"><span class="open">open</span></span></li>
-        <li><span class="rm">Queen room</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Queen room</span><span class="who">Alex &amp; Amy</span></li>
+        <li><span class="rm">Queen room</span><span class="who">Alex &amp; Amy's 2 kids</span></li>
       </ul>
     </div>
 
@@ -272,7 +272,7 @@
 
     // Open capacity per cabin — total people that still fit. KEEP IN SYNC WITH THE ROSTERS ABOVE.
     var CAP={
-      Oak:  {spots:4, petOk:true},   // 2 open Queens (loft & twins taken by the kids)
+      Oak:  {spots:0, petOk:true},   // FULL — King, Katie, kids (loft/twins), Alex & Amy + kids (2 Queens)
       Aspen:{spots:9, petOk:true},   // Double + twin room + loft & fold-out (Steff has one spot)
       Cedar:{spots:6, petOk:false}   // 2 open Doubles + sleeper sofa; pet-free
     };
