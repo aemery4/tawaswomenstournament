@@ -176,7 +176,7 @@
     </div>
 
     <div class="venmo">
-      <b>To lock your spot:</b> find your amount next to your name above, then Venmo it to me — <a href="https://venmo.com/u/Ashley-Emery4" target="_blank" rel="noopener">venmo.com/u/Ashley-Emery4</a>. Just put <b>your name + "Tawas cabins"</b> in the note.
+      <b>To pay:</b> add your cabin amount (next to your name above) plus the <b>$21 player fee</b> if you're playing, and Venmo the total in one payment — <a href="https://venmo.com/u/Ashley-Emery4" target="_blank" rel="noopener">venmo.com/u/Ashley-Emery4</a>. Just put <b>your name + "Tawas"</b> in the note.
     </div>
 
     <h2>Want in? Grab an open spot</h2>
@@ -223,13 +223,19 @@
           <input type="number" id="aspots" name="Adult spots" min="0" step="1" value="0" inputmode="numeric">
         </div>
       </div>
-      <div class="field">
-        <label for="kspots">Kid spots <span class="hint">— $40 each (loft / sleeper)</span></label>
-        <input type="number" id="kspots" name="Kid spots" min="0" step="1" value="0" inputmode="numeric">
+      <div class="field row2">
+        <div>
+          <label for="kspots">Kid spots <span class="hint">— $40 each (loft / sleeper)</span></label>
+          <input type="number" id="kspots" name="Kid spots" min="0" step="1" value="0" inputmode="numeric">
+        </div>
+        <div>
+          <label for="players">Players <span class="hint">— $21 each (team fee)</span></label>
+          <input type="number" id="players" name="Players" min="0" step="1" value="0" inputmode="numeric">
+        </div>
       </div>
 
       <div class="calc">
-        <span class="lbl">Rough total</span>
+        <span class="lbl">Your total <span style="font-weight:500;color:var(--muted);text-transform:none;letter-spacing:0">cabin + player fee</span></span>
         <span class="tot" id="total">$0</span>
       </div>
 
@@ -260,9 +266,9 @@
 
     <h2>Team player fee</h2>
     <div class="feecard">
-      <p>Separate from the cabins — this is our <b>tournament entry fee</b>, what gets Hot Pitches on the field. Our team fee is <b>$275</b>, split across everyone playing.</p>
-      <p class="fee-amt">Your share: <span class="tbd">TBD</span></p>
-      <p class="fee-note">I'll lock the per-player amount once we know our final roster, then it's a quick Venmo to <a href="https://venmo.com/u/Ashley-Emery4" target="_blank" rel="noopener">Ashley</a> — note <b>your name + "player fee"</b> (keep it separate from your cabin payment).</p>
+      <p>If you're playing, there's also our <b>tournament entry fee</b> — the $275 that gets Hot Pitches on the field, split across the 13 of us.</p>
+      <p class="fee-amt">Per player: <span class="tbd">$21</span></p>
+      <p class="fee-note"><b>Just add it to your cabin amount and Venmo the whole thing in one payment</b> — no need to send it separately. (Not playing? Skip this.)</p>
     </div>
 
   </div>
@@ -280,14 +286,15 @@
     var r=document.getElementById('rooms'),
         a=document.getElementById('aspots'),
         k=document.getElementById('kspots'),
+        p=document.getElementById('players'),
         out=document.getElementById('total'),
         hid=document.getElementById('total-field');
     function ival(el){return Math.max(0,parseInt(el.value,10)||0);}
     function calc(){
-      var t=ival(r)*160+ival(a)*80+ival(k)*40;
+      var t=ival(r)*160+ival(a)*80+ival(k)*40+ival(p)*21;
       out.textContent='$'+t; hid.value='$'+t;
     }
-    [r,a,k].forEach(function(el){el.addEventListener('input',calc);});
+    [r,a,k,p].forEach(function(el){el.addEventListener('input',calc);});
     calc();
   })();
 </script>
