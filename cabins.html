@@ -149,9 +149,12 @@
       <div class="beds">Queen · Double · twin-bed room · fold-out · loft (Double + 2 singles)</div>
       <ul class="roster">
         <li><span class="rm">Queen room</span><span class="who">Beth &amp; Jonnie</span></li>
-        <li><span class="rm">Double room</span><span class="who">Crissy &amp; Lou</span></li>
-        <li><span class="rm">Twin-bed room</span><span class="who">Brooke &amp; Julia</span></li>
-        <li><span class="rm">Loft &amp; fold-out</span><span class="who">Steff &amp; Kylee · <span class="open">open spots</span></span></li>
+        <li><span class="rm">Double room</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Twin-bed room</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Fold-out couch</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Loft — double</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Loft — single</span><span class="who">Steff</span></li>
+        <li><span class="rm">Loft — single</span><span class="who"><span class="open">open</span></span></li>
       </ul>
     </div>
 
@@ -161,7 +164,7 @@
       <div class="beds">2 Double bedrooms · double sleeper sofa</div>
       <ul class="roster">
         <li><span class="rm">Double room</span><span class="who">Stephen &amp; Nicole</span></li>
-        <li><span class="rm">Double room</span><span class="who">Sky</span></li>
+        <li><span class="rm">Double room</span><span class="who">Skylar</span></li>
         <li><span class="rm">Sleeper sofa</span><span class="who"><span class="open">open</span></span></li>
       </ul>
     </div>
@@ -273,8 +276,8 @@
     // Open capacity per cabin — total people that still fit. KEEP IN SYNC WITH THE ROSTERS ABOVE.
     var CAP={
       Oak:  {spots:0, petOk:true},   // FULL — King, Katie, kids (loft/twins), Alex & Amy + kids (2 Queens)
-      Aspen:{spots:4, petOk:true},   // rooms full (Beth&Jonnie, Crissy&Lou, Brooke&Julia); Steff & Kylee in spots; ~4 loft/fold-out spots open
-      Cedar:{spots:2, petOk:false}   // Stephen & Nicole + Sky in the 2 Doubles; only the sleeper sofa open; pet-free
+      Aspen:{spots:9, petOk:true},   // Beth&Jonnie (Queen), Steff (loft single); Double, twin room, fold-out & rest of loft open
+      Cedar:{spots:2, petOk:false}   // Stephen & Nicole + Skylar in the 2 Doubles; only the sleeper sofa open; pet-free
     };
 
     function ival(el){return Math.max(0,parseInt(el.value,10)||0);}
