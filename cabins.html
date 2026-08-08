@@ -55,7 +55,11 @@
   .roster{list-style:none;margin:12px 0 0;padding:12px 0 0;border-top:1px dashed var(--line)}
   .roster li{font-size:14px;color:var(--ink);padding:3px 0;display:flex;gap:8px}
   .roster li .rm{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:12px;color:var(--muted);min-width:118px;flex:0 0 118px}
+  .roster li .who{flex:1}
   .roster li .who .open{color:var(--gold-dk);font-weight:600}
+  .roster li .cost{margin-left:auto;font-family:"Oswald",sans-serif;font-size:12.5px;font-weight:600;color:var(--green-dk);white-space:nowrap;text-align:right;padding-left:8px}
+  .roster li .cost .ea{color:var(--muted);font-weight:500}
+  .roster li.open-row .cost{color:var(--gold-dk)}
 
   .venmo{background:#e7f6ec;border:1px solid var(--green);border-radius:14px;padding:18px 20px;margin:26px 0 8px}
   .venmo b{color:var(--green-dk)}
@@ -108,26 +112,28 @@
   <div class="wrap">
     <div class="eyebrow" style="color:var(--gold)">Team cabin weekend</div>
     <h1>Timberlane Resorts</h1>
-    <p class="sub">Fri–Sun, September 11–13 · lakeside cabins in East Tawas · two nights right by the field.</p>
+    <p class="sub">Fri–Sun, September 11–13 · lakeside cabins in East Tawas.</p>
   </div>
 </section>
 
 <main>
   <div class="wrap">
-    <p class="lead">We've got three cabins on the lake for tournament weekend. Grab a spot below, and I'll slot everyone in. Here's your share of the cabins for both nights:</p>
+    <p class="lead">Three cabins on the lake for tournament weekend — here's who's landed where and what each spot runs for both nights. Your amount is next to your name below.</p>
 
     <div class="price-row">
       <div class="price">
-        <div class="tier">Per adult</div>
-        <div class="amt">$100 <small>/ weekend</small></div>
-        <div class="note">Your share of the cabins for both nights.</div>
+        <div class="tier">A bedroom</div>
+        <div class="amt">$160 <small>/ room</small></div>
+        <div class="note">The whole room, split by whoever's in it — solo $160, a couple $80 each.</div>
       </div>
       <div class="price">
-        <div class="tier">Per kid</div>
-        <div class="amt">$50 <small>/ weekend</small></div>
-        <div class="note">Half price for kids 12 &amp; under.</div>
+        <div class="tier">A spot</div>
+        <div class="amt">$80 <small>adult</small></div>
+        <div class="note">Loft, fold-out or sleeper. Kids on a spot are $40.</div>
       </div>
     </div>
+    <div class="atcost">🛏️ It splits the three cabins right at cost — you pay for your room or spot, and roommates split the room. That's why a couple in a bedroom pays half of what someone has it solo.</div>
+
     <h2>The cabins</h2>
 
     <div class="cabin">
@@ -135,26 +141,26 @@
       <p>Our home base — the big one. A/C, 3 bathrooms, jacuzzi tub, screened porch. This one's <b>full now</b> — my crew, the kids, and Alex &amp; Amy's family.</p>
       <div class="beds">King · 3 Queens · loft &amp; twin sleepers</div>
       <ul class="roster">
-        <li><span class="rm">King room</span><span class="who">Ashley &amp; Britt</span></li>
-        <li><span class="rm">Queen room</span><span class="who">Katie</span></li>
-        <li><span class="rm">Loft &amp; twins</span><span class="who">Wyatt, Ellie, Mischa &amp; Walker</span></li>
-        <li><span class="rm">Queen room</span><span class="who">Alex &amp; Amy</span></li>
-        <li><span class="rm">Queen room</span><span class="who">Alex &amp; Amy's 2 kids</span></li>
+        <li><span class="rm">King room</span><span class="who">Ashley &amp; Britt</span><span class="cost">$160 <span class="ea">· $80 ea</span></span></li>
+        <li><span class="rm">Queen room</span><span class="who">Katie</span><span class="cost">$160</span></li>
+        <li><span class="rm">Loft &amp; twins</span><span class="who">Wyatt, Ellie, Mischa &amp; Walker</span><span class="cost">$40 <span class="ea">ea</span></span></li>
+        <li><span class="rm">Queen room</span><span class="who">Alex &amp; Amy</span><span class="cost">$160 <span class="ea">· $80 ea</span></span></li>
+        <li><span class="rm">Queen room</span><span class="who">Alex &amp; Amy's 2 kids</span><span class="cost">$160 <span class="ea">· $80 ea</span></span></li>
       </ul>
     </div>
 
     <div class="cabin">
       <h3>Aspen <span class="tag">team hangout</span></h3>
-      <p>This is where we all gather — the central hangout for the whole crew, with a <b>fire pit right on the lake</b>. Screened porch, dishwasher, fireplace. Come hang here even if you're sleeping in another cabin. Still plenty of room to stay, too.</p>
+      <p>This is where we all gather — the central hangout for the whole crew, with a <b>fire pit right on the lake</b>. Screened porch, dishwasher, fireplace. Come hang here even if you're sleeping in another cabin. Plenty of open spots — grab one.</p>
       <div class="beds">Queen · Double · twin-bed room · fold-out · loft (Double + 2 singles)</div>
       <ul class="roster">
-        <li><span class="rm">Queen room</span><span class="who">Beth &amp; Jonnie</span></li>
-        <li><span class="rm">Double room</span><span class="who"><span class="open">open</span></span></li>
-        <li><span class="rm">Twin-bed room</span><span class="who"><span class="open">open</span></span></li>
-        <li><span class="rm">Fold-out couch</span><span class="who"><span class="open">open</span></span></li>
-        <li><span class="rm">Loft — double</span><span class="who"><span class="open">open</span></span></li>
-        <li><span class="rm">Loft — single</span><span class="who">Steff</span></li>
-        <li><span class="rm">Loft — single</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Queen room</span><span class="who">Beth &amp; Jonnie</span><span class="cost">$160 <span class="ea">· $80 ea</span></span></li>
+        <li class="open-row"><span class="rm">Double room</span><span class="who"><span class="open">open</span></span><span class="cost">$160</span></li>
+        <li class="open-row"><span class="rm">Twin-bed room</span><span class="who"><span class="open">open</span></span><span class="cost">$160</span></li>
+        <li class="open-row"><span class="rm">Fold-out couch</span><span class="who"><span class="open">open</span></span><span class="cost">$80</span></li>
+        <li class="open-row"><span class="rm">Loft — double</span><span class="who"><span class="open">open</span></span><span class="cost">$80</span></li>
+        <li><span class="rm">Loft — single</span><span class="who">Steff</span><span class="cost">$80</span></li>
+        <li class="open-row"><span class="rm">Loft — single</span><span class="who"><span class="open">open</span></span><span class="cost">$80</span></li>
       </ul>
     </div>
 
@@ -163,17 +169,18 @@
       <p>The cozy one — calmer and a little tucked away, nice if you've got littles or just want quiet. <b>Pet-free cabin</b>, so no dogs here.</p>
       <div class="beds">2 Double bedrooms · double sleeper sofa</div>
       <ul class="roster">
-        <li><span class="rm">Double room</span><span class="who">Stephen &amp; Nicole</span></li>
-        <li><span class="rm">Double room</span><span class="who">Skylar</span></li>
-        <li><span class="rm">Sleeper sofa</span><span class="who"><span class="open">open</span></span></li>
+        <li><span class="rm">Double room</span><span class="who">Stephen, Nicole &amp; Skylar</span><span class="cost">$160 <span class="ea">· ~$53 ea</span></span></li>
+        <li class="open-row"><span class="rm">Double room</span><span class="who"><span class="open">open</span></span><span class="cost">$160</span></li>
+        <li class="open-row"><span class="rm">Sleeper sofa</span><span class="who"><span class="open">open</span></span><span class="cost">$80</span></li>
       </ul>
     </div>
 
     <div class="venmo">
-      <b>To lock your spot:</b> Venmo me once you know your total — <a href="https://venmo.com/u/Ashley-Emery4" target="_blank" rel="noopener">venmo.com/u/Ashley-Emery4</a>. Just put <b>your name + "Tawas cabins"</b> in the note. Fill out the form first so I know where to put you.
+      <b>To lock your spot:</b> find your amount next to your name above, then Venmo it to me — <a href="https://venmo.com/u/Ashley-Emery4" target="_blank" rel="noopener">venmo.com/u/Ashley-Emery4</a>. Just put <b>your name + "Tawas cabins"</b> in the note.
     </div>
 
-    <h2>Sign up</h2>
+    <h2>Want in? Grab an open spot</h2>
+    <p class="lead" style="font-size:16px;margin:-4px 0 14px">Not on the list yet? Tell me who you are and I'll slot you into one of the open rooms/spots above.</p>
     <form id="cabin-form" action="https://formsubmit.co/f49d71f553207d16925b70bf58477c51" method="POST">
       <div class="field">
         <label for="name">Your name <span class="req">*</span></label>
@@ -208,17 +215,21 @@
 
       <div class="field row2">
         <div>
-          <label for="adults">Adults <span class="hint">($100 each)</span></label>
-          <input type="number" id="adults" name="Adults" min="0" step="1" value="0" inputmode="numeric">
+          <label for="rooms">Private rooms <span class="hint">— $160 each (split it)</span></label>
+          <input type="number" id="rooms" name="Bedrooms" min="0" step="1" value="0" inputmode="numeric">
         </div>
         <div>
-          <label for="kids">Kids <span class="hint">— 12 &amp; under ($50 each)</span></label>
-          <input type="number" id="kids" name="Kids" min="0" step="1" value="0" inputmode="numeric">
+          <label for="aspots">Adult spots <span class="hint">— $80 each</span></label>
+          <input type="number" id="aspots" name="Adult spots" min="0" step="1" value="0" inputmode="numeric">
         </div>
+      </div>
+      <div class="field">
+        <label for="kspots">Kid spots <span class="hint">— $40 each (loft / sleeper)</span></label>
+        <input type="number" id="kspots" name="Kid spots" min="0" step="1" value="0" inputmode="numeric">
       </div>
 
       <div class="calc">
-        <span class="lbl">Your total for the weekend</span>
+        <span class="lbl">Rough total</span>
         <span class="tot" id="total">$0</span>
       </div>
 
@@ -243,8 +254,6 @@
       <input type="hidden" name="Estimated total" id="total-field" value="$0">
       <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-      <div id="cap-err" class="cap-err" role="alert" hidden></div>
-
       <button type="submit" class="brand" style="width:100%;padding:15px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:16px;cursor:pointer">Send my spot</button>
       <p class="form-note">This just goes to me (Ashley). Questions? Text me or email <a href="mailto:tawassoftballtourney@gmail.com?subject=Tawas%20cabins">tawassoftballtourney@gmail.com</a>.</p>
     </form>
@@ -268,58 +277,18 @@
 
 <script>
   (function(){
-    var a=document.getElementById('adults'),k=document.getElementById('kids'),
-        out=document.getElementById('total'),hid=document.getElementById('total-field'),
-        cabinSel=document.getElementById('cabin'),dogSel=document.getElementById('dog'),
-        form=document.getElementById('cabin-form'),errBox=document.getElementById('cap-err');
-
-    // Open capacity per cabin — total people that still fit. KEEP IN SYNC WITH THE ROSTERS ABOVE.
-    var CAP={
-      Oak:  {spots:0, petOk:true},   // FULL — King, Katie, kids (loft/twins), Alex & Amy + kids (2 Queens)
-      Aspen:{spots:9, petOk:true},   // Beth&Jonnie (Queen), Steff (loft single); Double, twin room, fold-out & rest of loft open
-      Cedar:{spots:2, petOk:false}   // Stephen & Nicole + Skylar in the 2 Doubles; only the sleeper sofa open; pet-free
-    };
-
+    var r=document.getElementById('rooms'),
+        a=document.getElementById('aspots'),
+        k=document.getElementById('kspots'),
+        out=document.getElementById('total'),
+        hid=document.getElementById('total-field');
     function ival(el){return Math.max(0,parseInt(el.value,10)||0);}
     function calc(){
-      var t=ival(a)*100+ival(k)*50;
+      var t=ival(r)*160+ival(a)*80+ival(k)*40;
       out.textContent='$'+t; hid.value='$'+t;
     }
-    a.addEventListener('input',calc);
-    k.addEventListener('input',calc);
+    [r,a,k].forEach(function(el){el.addEventListener('input',calc);});
     calc();
-
-    function clearErr(){errBox.hidden=true;errBox.innerHTML='';}
-    a.addEventListener('input',clearErr);
-    k.addEventListener('input',clearErr);
-    cabinSel.addEventListener('change',clearErr);
-    dogSel.addEventListener('change',clearErr);
-
-    form.addEventListener('submit',function(e){
-      var cabin=cabinSel.value, people=ival(a)+ival(k), dog=(dogSel.value==='Yes'), msgs=[];
-
-      if(people<1){
-        msgs.push('Add at least one person so I know who to expect.');
-      }
-      var c=CAP[cabin];
-      if(c){
-        if(!c.petOk && dog){
-          msgs.push(cabin+' is pet-free — pick Oak or Aspen if you’re bringing a dog.');
-        }
-        if(people>c.spots){
-          msgs.push(c.spots===0
-            ? cabin+' is full — pick another cabin, or choose “No preference.”'
-            : cabin+' only has room for '+c.spots+' more '+(c.spots===1?'person':'people')+' — trim the count, or pick another cabin.');
-        }
-      }
-
-      if(msgs.length){
-        e.preventDefault();
-        errBox.innerHTML='<strong>Hmm, that won’t quite fit:</strong><ul><li>'+msgs.join('</li><li>')+'</li></ul>Not sure where to land? Pick “No preference” and I’ll sort it.';
-        errBox.hidden=false;
-        errBox.scrollIntoView({behavior:'smooth',block:'center'});
-      }
-    });
   })();
 </script>
 </body>
