@@ -1,6 +1,6 @@
 # Tawas Women's Softball Tournament — website
 
-Public marketing + registration site for the **55th Annual Tawas Women's Softball Tournament** (Sept 12–13, 2026, Duwey Durant Field, East Tawas, MI). All proceeds benefit Special Olympics.
+Public marketing + registration site for the **55th Annual Tawas Women's Softball Tournament** (Sept 12–13, 2026, Dewey Durant Field, East Tawas, MI). All proceeds benefit Special Olympics.
 
 Static site — no build step. Deployed on Cloudflare Pages, custom domain **tawaswomenstournament.com**.
 
