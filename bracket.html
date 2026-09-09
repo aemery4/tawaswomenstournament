@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bracket &amp; Schedule (DRAFT) — Tawas Women's Softball Tournament</title>
+<title>Bracket &amp; Schedule (DRAFT) &mdash; Tawas Women's Softball Tournament</title>
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Working draft bracket and schedule for the Tawas Women's Softball Tournament, Sept 12-13, 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,12 @@
   .hdr{border-bottom:3px solid var(--green);padding-bottom:14px;margin-bottom:4px}
   .lead{background:#fbf3dd;border:1px solid var(--gold);border-radius:12px;padding:14px 18px;margin:18px 0 4px;font-size:15px}
   .lead b{color:var(--green-dk)}
+  .livechip{display:inline-flex;align-items:center;gap:8px;font-family:"Oswald",sans-serif;font-size:13px;font-weight:600;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--paper);border:1px solid var(--line);
+    border-radius:999px;padding:7px 14px;margin:16px 0 0}
+  .livechip.on{color:var(--green-dk);border-color:var(--green)}
+  .livechip .dot{width:9px;height:9px;border-radius:50%;background:#d64545;box-shadow:0 0 0 0 rgba(214,69,69,.5);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(214,69,69,.5)}70%{box-shadow:0 0 0 7px rgba(214,69,69,0)}100%{box-shadow:0 0 0 0 rgba(214,69,69,0)}}
   table{width:100%;border-collapse:collapse;background:var(--paper);font-size:14px;box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
   th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
   th{background:var(--green);color:#fff;font-family:"Oswald",sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
@@ -34,6 +40,8 @@
   .so td{background:#eaf3ec;color:var(--green-dk);font-weight:700;text-align:center}
   .champ{background:#fbf3dd !important}
   .dim{color:var(--muted)}
+  .mt.win{font-weight:700;color:var(--green-dk)}
+  .scln{color:var(--green-dk);font-weight:700;white-space:nowrap}
   .draw{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 20px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:15px;box-shadow:var(--shadow)}
   .draw div{padding:2px 0}
   .draw .n{display:inline-block;width:24px;font-weight:700;color:var(--gold-dk)}
@@ -47,6 +55,9 @@
   .box.fin{fill:#fbf3dd;stroke:var(--green-dk);stroke-width:2.4}
   .div{stroke:var(--line);stroke-width:1}
   .tm{font-size:12.5px;fill:var(--ink)}
+  .tm.win{font-weight:700;fill:var(--green-dk)}
+  .sc{font-size:12.5px;fill:var(--muted);font-weight:700}
+  .sc.win{fill:var(--green-dk)}
   .ln{fill:none;stroke:#b9c3b2;stroke-width:1.6}
   .champ-arrow{font-size:12px;fill:var(--gold-dk);font-weight:700}
   .hint{color:var(--muted);font-size:12.5px;margin:6px 0 0}
@@ -57,20 +68,22 @@
 </style>
 </head>
 <body>
-<div class="draftbar">&#9888; Working draft — not yet public. Times &amp; draw subject to change.</div>
+<div class="draftbar">&#9888; Working draft &mdash; not yet public. Times &amp; draw subject to change.</div>
 <div class="wrap">
 
   <div class="hdr">
-    <div class="badge">55th Annual · Bill Walsh Memorial</div>
+    <div class="badge">55th Annual &middot; Bill Walsh Memorial</div>
     <h1>Bracket &amp; Schedule</h1>
-    <p class="sub">Tawas Women's Softball Tournament · September 12–13, 2026 · Dewey Durant Field, East Tawas · 9 teams · double elimination</p>
+    <p class="sub">Tawas Women's Softball Tournament &middot; September 12&ndash;13, 2026 &middot; Dewey Durant Field, East Tawas &middot; 9 teams &middot; double elimination</p>
   </div>
 
   <div class="lead">
-    <b>Umpires:</b> here's the working game plan — <b>3 fields</b>, 90-minute slots, first pitch <b>10:00 AM</b> both days.
+    <b>Umpires:</b> here's the working game plan &mdash; <b>3 fields</b>, 90-minute slots, first pitch <b>10:00 AM</b> both days.
     We run up to three games at once, so we need about <b>three umpires on the clock at peak</b> Saturday. Roughly 16 games to a champion.
-    Questions? Ashley Emery, Tournament Director — 734-678-1347.
+    Questions? Ashley Emery, Tournament Director &mdash; 734-678-1347.
   </div>
+
+  <div class="livechip" id="livechip">Live scores will appear here during the tournament weekend.</div>
 
   <h2>The Draw</h2>
   <div class="draw">
@@ -88,21 +101,13 @@
   <h2>Saturday, Sept 12</h2>
   <table>
     <tr><th>Time</th><th>Field 1 (main)</th><th>Field 2</th><th>Field 3</th></tr>
-    <tr><td class="time">10:00</td><td><span class="g">G1</span>Play-in: Koval v Lena's Crew</td><td><span class="g">G2</span>Kennedy's v Bat Intentions</td><td><span class="g">G3</span>Cranks v Amrize</td></tr>
-    <tr><td class="time">11:30</td><td><span class="g">G4</span>Good Vibrations v <span class="dim">Win G1</span></td><td><span class="g">G5</span>Hot Pitches v 41 &#9200;</td><td><span class="g">G6</span>Losers' R1: <span class="dim">Lose G1 v Lose G3</span></td></tr>
-    <tr class="so"><td class="time">1:00</td><td colspan="3">&#128153; SPECIAL OLYMPICS UNIFIED GAME — all games pause</td></tr>
-    <tr><td class="time">2:30</td><td><span class="g">G7</span>Winners' Semi 1: <span class="dim">Win G4 v Win G2</span></td><td><span class="g">G8</span>Winners' Semi 2: <span class="dim">Win G3 v Win G5</span></td><td><span class="g">G9</span>Losers' R2: <span class="dim">Lose G4 v Lose G2</span></td></tr>
-    <tr><td class="time">4:00</td><td><span class="g">G10</span><b>Winners' Final:</b> <span class="dim">Win G7 v Win G8</span></td><td><span class="g">G11</span>Losers' R3: <span class="dim">Win G6 v Lose G5</span></td><td><span class="g">G12</span>Losers' R4: <span class="dim">Lose G8 v Win G9</span></td></tr>
+    <tr><td class="time">10:00</td><td data-g="G1"><span class="g">G1</span>Play-in: <span class="mt" data-g="G1" data-slot="0">Koval</span> v <span class="mt" data-g="G1" data-slot="1">Lena's Crew</span><span class="scln" data-g="G1"></span></td><td data-g="G2"><span class="g">G2</span><span class="mt" data-g="G2" data-slot="0">Kennedy's</span> v <span class="mt" data-g="G2" data-slot="1">Bat Intentions</span><span class="scln" data-g="G2"></span></td><td data-g="G3"><span class="g">G3</span><span class="mt" data-g="G3" data-slot="0">Cranks</span> v <span class="mt" data-g="G3" data-slot="1">Amrize</span><span class="scln" data-g="G3"></span></td></tr><tr><td class="time">11:30</td><td data-g="G4"><span class="g">G4</span><span class="mt" data-g="G4" data-slot="0">Good Vibrations</span> v <span class="mt dim" data-g="G4" data-slot="1">Win G1</span><span class="scln" data-g="G4"></span></td><td data-g="G5"><span class="g">G5</span><span class="mt" data-g="G5" data-slot="0">Hot Pitches</span> v <span class="mt" data-g="G5" data-slot="1">41</span><span class="scln" data-g="G5"></span> &#9200;</td><td data-g="G6"><span class="g">G6</span>Losers' R1: <span class="mt dim" data-g="G6" data-slot="0">Lose G1</span> v <span class="mt dim" data-g="G6" data-slot="1">Lose G3</span><span class="scln" data-g="G6"></span></td></tr><tr class="so"><td class="time">1:00</td><td colspan="3">&#128153; SPECIAL OLYMPICS UNIFIED GAME &mdash; all games pause</td></tr><tr><td class="time">2:30</td><td data-g="G7"><span class="g">G7</span>Winners' Semi 1: <span class="mt dim" data-g="G7" data-slot="0">Win G4</span> v <span class="mt dim" data-g="G7" data-slot="1">Win G2</span><span class="scln" data-g="G7"></span></td><td data-g="G8"><span class="g">G8</span>Winners' Semi 2: <span class="mt dim" data-g="G8" data-slot="0">Win G3</span> v <span class="mt dim" data-g="G8" data-slot="1">Win G5</span><span class="scln" data-g="G8"></span></td><td data-g="G9"><span class="g">G9</span>Losers' R2: <span class="mt dim" data-g="G9" data-slot="0">Lose G4</span> v <span class="mt dim" data-g="G9" data-slot="1">Lose G2</span><span class="scln" data-g="G9"></span></td></tr><tr><td class="time">4:00</td><td data-g="G10"><span class="g">G10</span><b>Winners' Final: </b><span class="mt dim" data-g="G10" data-slot="0">Win G7</span> v <span class="mt dim" data-g="G10" data-slot="1">Win G8</span><span class="scln" data-g="G10"></span></td><td data-g="G11"><span class="g">G11</span>Losers' R3: <span class="mt dim" data-g="G11" data-slot="0">Win G6</span> v <span class="mt dim" data-g="G11" data-slot="1">Lose G5</span><span class="scln" data-g="G11"></span></td><td data-g="G12"><span class="g">G12</span>Losers' R4: <span class="mt dim" data-g="G12" data-slot="0">Lose G8</span> v <span class="mt dim" data-g="G12" data-slot="1">Win G9</span><span class="scln" data-g="G12"></span></td></tr>
   </table>
 
-  <h2>Sunday, Sept 13 — Finals Day</h2>
+  <h2>Sunday, Sept 13 &mdash; Finals Day</h2>
   <table>
     <tr><th>Time</th><th>Field 1 (main)</th></tr>
-    <tr><td class="time">10:00</td><td><span class="g">G13</span>Losers' R5: <span class="dim">Lose G7 v Win G11</span></td></tr>
-    <tr><td class="time">11:30</td><td><span class="g">G14</span>Losers' Semifinal: <span class="dim">Win G12 v Win G13</span></td></tr>
-    <tr><td class="time">1:00</td><td><span class="g">G15</span>Losers' Final: <span class="dim">Win G14 v Lose G10</span></td></tr>
-    <tr class="champ"><td class="time">2:30</td><td><span class="g">G16</span>&#127942; <b>CHAMPIONSHIP:</b> <span class="dim">Win G10 v Win G15</span></td></tr>
-    <tr><td class="time">4:00</td><td><span class="g">G17</span>Championship "if" game — <span class="dim">only if the Losers' Final winner takes G16</span></td></tr>
+    <tr><td class="time">10:00</td><td data-g="G13"><span class="g">G13</span>Losers' R5: <span class="mt dim" data-g="G13" data-slot="0">Lose G7</span> v <span class="mt dim" data-g="G13" data-slot="1">Win G11</span><span class="scln" data-g="G13"></span></td></tr><tr><td class="time">11:30</td><td data-g="G14"><span class="g">G14</span>Losers' Semifinal: <span class="mt dim" data-g="G14" data-slot="0">Win G12</span> v <span class="mt dim" data-g="G14" data-slot="1">Win G13</span><span class="scln" data-g="G14"></span></td></tr><tr><td class="time">1:00</td><td data-g="G15"><span class="g">G15</span>Losers' Final: <span class="mt dim" data-g="G15" data-slot="0">Win G14</span> v <span class="mt dim" data-g="G15" data-slot="1">Lose G10</span><span class="scln" data-g="G15"></span></td></tr><tr class="champ"><td class="time">2:30</td><td data-g="G16"><span class="g">G16</span><b>&#127942; CHAMPIONSHIP: </b><span class="mt dim" data-g="G16" data-slot="0">Win G10</span> v <span class="mt dim" data-g="G16" data-slot="1">Win G15</span><span class="scln" data-g="G16"></span></td></tr><tr><td class="time">4:00</td><td data-g="G17"><span class="g">G17</span>Championship &ldquo;if&rdquo; game &mdash; <span class="mt dim" data-g="G17" data-slot="0">Win G16</span> v <span class="mt dim" data-g="G17" data-slot="1">Lose G16</span><span class="scln" data-g="G17"></span></td></tr>
   </table>
 
   <h2>Bracket</h2>
@@ -110,111 +115,158 @@
   <div class="scroll"><svg viewBox="0 0 1500 560" xmlns="http://www.w3.org/2000/svg" class="bracket">
   <text class="section" x="20" y="26">WINNERS' BRACKET</text>
   <text class="section" x="20" y="378">LOSERS' BRACKET</text>
-  <text class="champ-arrow" x="1305" y="286">🏆 to win it all</text>
+  <text class="champ-arrow" x="1305" y="286">&#127942; to win it all</text>
   <path class="ln" d="M 190 66.0 H 198"/><path class="ln" d="M 198 62.0 V 66.0"/><path class="ln" d="M 198 62.0 H 220"/><path class="ln" d="M 390 62.0 H 418"/><path class="ln" d="M 390 142.0 H 418"/><path class="ln" d="M 418 62.0 V 142.0"/><path class="ln" d="M 418 102.0 H 440"/><path class="ln" d="M 390 236.0 H 418"/><path class="ln" d="M 390 316.0 H 418"/><path class="ln" d="M 418 236.0 V 316.0"/><path class="ln" d="M 418 276.0 H 440"/><path class="ln" d="M 610 102.0 H 638"/><path class="ln" d="M 610 276.0 H 638"/><path class="ln" d="M 638 102.0 V 276.0"/><path class="ln" d="M 638 189.0 H 660"/><path class="ln" d="M 390 420.0 H 418"/><path class="ln" d="M 418 420.0 V 420.0"/><path class="ln" d="M 418 420.0 H 440"/><path class="ln" d="M 390 504.0 H 418"/><path class="ln" d="M 418 504.0 V 504.0"/><path class="ln" d="M 418 504.0 H 440"/><path class="ln" d="M 610 420.0 H 638"/><path class="ln" d="M 638 420.0 V 420.0"/><path class="ln" d="M 638 420.0 H 660"/><path class="ln" d="M 610 504.0 H 858"/><path class="ln" d="M 830 420.0 H 858"/><path class="ln" d="M 858 420.0 V 504.0"/><path class="ln" d="M 858 462.0 H 880"/><path class="ln" d="M 1050 462.0 H 1078"/><path class="ln" d="M 1078 462.0 V 462.0"/><path class="ln" d="M 1078 462.0 H 1100"/><path class="ln" d="M 830 189.0 H 1283"/><path class="ln" d="M 1270 462.0 H 1283"/><path class="ln" d="M 1283 189.0 V 462.0"/><path class="ln" d="M 1283 322.0 H 1305"/>
   <g>
-  <text class="glabel" x="24" y="39">G1 · Play-in</text>
+  <text class="glabel" x="24" y="39">G1 &middot; Play-in</text>
   <rect class="box wb" x="20" y="44" width="170" height="44" rx="7"/>
-  <line class="div" x1="20" y1="66.0" x2="190" y2="66.0"/>
-  <text class="tm" x="29" y="60">8 Koval</text>
-  <text class="tm" x="29" y="81">9 Lena's Crew</text>
-</g><g>
-  <text class="glabel" x="224" y="35">G4 · Quarterfinal</text>
+  <line class="div" x1="20" y1="66" x2="190" y2="66"/>
+  <text class="tm" data-g="G1" data-slot="0" x="29" y="60">8 Koval</text>
+  <text class="sc" data-g="G1" data-slot="0" x="181" y="60" text-anchor="end"></text>
+  <text class="tm" data-g="G1" data-slot="1" x="29" y="81">9 Lena's Crew</text>
+  <text class="sc" data-g="G1" data-slot="1" x="181" y="81" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="224" y="35">G4 &middot; Quarterfinal</text>
   <rect class="box wb" x="220" y="40" width="170" height="44" rx="7"/>
-  <line class="div" x1="220" y1="62.0" x2="390" y2="62.0"/>
-  <text class="tm" x="229" y="56">1 Good Vibrations</text>
-  <text class="tm" x="229" y="77">Win G1</text>
-</g><g>
-  <text class="glabel" x="224" y="115">G2 · Quarterfinal</text>
+  <line class="div" x1="220" y1="62" x2="390" y2="62"/>
+  <text class="tm" data-g="G4" data-slot="0" x="229" y="56">1 Good Vibrations</text>
+  <text class="sc" data-g="G4" data-slot="0" x="381" y="56" text-anchor="end"></text>
+  <text class="tm" data-g="G4" data-slot="1" x="229" y="77">Win G1</text>
+  <text class="sc" data-g="G4" data-slot="1" x="381" y="77" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="224" y="115">G2 &middot; Quarterfinal</text>
   <rect class="box wb" x="220" y="120" width="170" height="44" rx="7"/>
-  <line class="div" x1="220" y1="142.0" x2="390" y2="142.0"/>
-  <text class="tm" x="229" y="136">4 Kennedy's</text>
-  <text class="tm" x="229" y="157">5 Bat Intentions</text>
-</g><g>
-  <text class="glabel" x="224" y="209">G3 · Quarterfinal</text>
+  <line class="div" x1="220" y1="142" x2="390" y2="142"/>
+  <text class="tm" data-g="G2" data-slot="0" x="229" y="136">4 Kennedy's</text>
+  <text class="sc" data-g="G2" data-slot="0" x="381" y="136" text-anchor="end"></text>
+  <text class="tm" data-g="G2" data-slot="1" x="229" y="157">5 Bat Intentions</text>
+  <text class="sc" data-g="G2" data-slot="1" x="381" y="157" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="224" y="209">G3 &middot; Quarterfinal</text>
   <rect class="box wb" x="220" y="214" width="170" height="44" rx="7"/>
-  <line class="div" x1="220" y1="236.0" x2="390" y2="236.0"/>
-  <text class="tm" x="229" y="230">2 Cranks</text>
-  <text class="tm" x="229" y="251">7 Amrize</text>
-</g><g>
-  <text class="glabel" x="224" y="289">G5 · Quarterfinal</text>
+  <line class="div" x1="220" y1="236" x2="390" y2="236"/>
+  <text class="tm" data-g="G3" data-slot="0" x="229" y="230">2 Cranks</text>
+  <text class="sc" data-g="G3" data-slot="0" x="381" y="230" text-anchor="end"></text>
+  <text class="tm" data-g="G3" data-slot="1" x="229" y="251">7 Amrize</text>
+  <text class="sc" data-g="G3" data-slot="1" x="381" y="251" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="224" y="289">G5 &middot; Quarterfinal</text>
   <rect class="box wb" x="220" y="294" width="170" height="44" rx="7"/>
-  <line class="div" x1="220" y1="316.0" x2="390" y2="316.0"/>
-  <text class="tm" x="229" y="310">3 Hot Pitches</text>
-  <text class="tm" x="229" y="331">6 41</text>
-</g><g>
-  <text class="glabel" x="444" y="75">G7 · Winners' Semi</text>
+  <line class="div" x1="220" y1="316" x2="390" y2="316"/>
+  <text class="tm" data-g="G5" data-slot="0" x="229" y="310">3 Hot Pitches</text>
+  <text class="sc" data-g="G5" data-slot="0" x="381" y="310" text-anchor="end"></text>
+  <text class="tm" data-g="G5" data-slot="1" x="229" y="331">6 41</text>
+  <text class="sc" data-g="G5" data-slot="1" x="381" y="331" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="444" y="75">G7 &middot; Winners' Semi</text>
   <rect class="box wb" x="440" y="80" width="170" height="44" rx="7"/>
-  <line class="div" x1="440" y1="102.0" x2="610" y2="102.0"/>
-  <text class="tm" x="449" y="96">Win G4</text>
-  <text class="tm" x="449" y="117">Win G2</text>
-</g><g>
-  <text class="glabel" x="444" y="249">G8 · Winners' Semi</text>
+  <line class="div" x1="440" y1="102" x2="610" y2="102"/>
+  <text class="tm" data-g="G7" data-slot="0" x="449" y="96">Win G4</text>
+  <text class="sc" data-g="G7" data-slot="0" x="601" y="96" text-anchor="end"></text>
+  <text class="tm" data-g="G7" data-slot="1" x="449" y="117">Win G2</text>
+  <text class="sc" data-g="G7" data-slot="1" x="601" y="117" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="444" y="249">G8 &middot; Winners' Semi</text>
   <rect class="box wb" x="440" y="254" width="170" height="44" rx="7"/>
-  <line class="div" x1="440" y1="276.0" x2="610" y2="276.0"/>
-  <text class="tm" x="449" y="270">Win G3</text>
-  <text class="tm" x="449" y="291">Win G5</text>
-</g><g>
-  <text class="glabel" x="664" y="162">G10 · Winners' Final</text>
+  <line class="div" x1="440" y1="276" x2="610" y2="276"/>
+  <text class="tm" data-g="G8" data-slot="0" x="449" y="270">Win G3</text>
+  <text class="sc" data-g="G8" data-slot="0" x="601" y="270" text-anchor="end"></text>
+  <text class="tm" data-g="G8" data-slot="1" x="449" y="291">Win G5</text>
+  <text class="sc" data-g="G8" data-slot="1" x="601" y="291" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="664" y="162">G10 &middot; Winners' Final</text>
   <rect class="box wb" x="660" y="167" width="170" height="44" rx="7"/>
-  <line class="div" x1="660" y1="189.0" x2="830" y2="189.0"/>
-  <text class="tm" x="669" y="183">Win G7</text>
-  <text class="tm" x="669" y="204">Win G8</text>
-</g><g>
-  <text class="glabel" x="224" y="393">G6 · Losers' R1</text>
+  <line class="div" x1="660" y1="189" x2="830" y2="189"/>
+  <text class="tm" data-g="G10" data-slot="0" x="669" y="183">Win G7</text>
+  <text class="sc" data-g="G10" data-slot="0" x="821" y="183" text-anchor="end"></text>
+  <text class="tm" data-g="G10" data-slot="1" x="669" y="204">Win G8</text>
+  <text class="sc" data-g="G10" data-slot="1" x="821" y="204" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="224" y="393">G6 &middot; Losers' R1</text>
   <rect class="box lb" x="220" y="398" width="170" height="44" rx="7"/>
-  <line class="div" x1="220" y1="420.0" x2="390" y2="420.0"/>
-  <text class="tm" x="229" y="414">Lose G1</text>
-  <text class="tm" x="229" y="435">Lose G3</text>
-</g><g>
-  <text class="glabel" x="224" y="477">G9 · Losers' R2</text>
+  <line class="div" x1="220" y1="420" x2="390" y2="420"/>
+  <text class="tm" data-g="G6" data-slot="0" x="229" y="414">Lose G1</text>
+  <text class="sc" data-g="G6" data-slot="0" x="381" y="414" text-anchor="end"></text>
+  <text class="tm" data-g="G6" data-slot="1" x="229" y="435">Lose G3</text>
+  <text class="sc" data-g="G6" data-slot="1" x="381" y="435" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="224" y="477">G9 &middot; Losers' R2</text>
   <rect class="box lb" x="220" y="482" width="170" height="44" rx="7"/>
-  <line class="div" x1="220" y1="504.0" x2="390" y2="504.0"/>
-  <text class="tm" x="229" y="498">Lose G4</text>
-  <text class="tm" x="229" y="519">Lose G2</text>
-</g><g>
-  <text class="glabel" x="444" y="393">G11 · Losers' R3</text>
+  <line class="div" x1="220" y1="504" x2="390" y2="504"/>
+  <text class="tm" data-g="G9" data-slot="0" x="229" y="498">Lose G4</text>
+  <text class="sc" data-g="G9" data-slot="0" x="381" y="498" text-anchor="end"></text>
+  <text class="tm" data-g="G9" data-slot="1" x="229" y="519">Lose G2</text>
+  <text class="sc" data-g="G9" data-slot="1" x="381" y="519" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="444" y="393">G11 &middot; Losers' R3</text>
   <rect class="box lb" x="440" y="398" width="170" height="44" rx="7"/>
-  <line class="div" x1="440" y1="420.0" x2="610" y2="420.0"/>
-  <text class="tm" x="449" y="414">Win G6</text>
-  <text class="tm" x="449" y="435">Lose G5</text>
-</g><g>
-  <text class="glabel" x="444" y="477">G12 · Losers' R4</text>
+  <line class="div" x1="440" y1="420" x2="610" y2="420"/>
+  <text class="tm" data-g="G11" data-slot="0" x="449" y="414">Win G6</text>
+  <text class="sc" data-g="G11" data-slot="0" x="601" y="414" text-anchor="end"></text>
+  <text class="tm" data-g="G11" data-slot="1" x="449" y="435">Lose G5</text>
+  <text class="sc" data-g="G11" data-slot="1" x="601" y="435" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="444" y="477">G12 &middot; Losers' R4</text>
   <rect class="box lb" x="440" y="482" width="170" height="44" rx="7"/>
-  <line class="div" x1="440" y1="504.0" x2="610" y2="504.0"/>
-  <text class="tm" x="449" y="498">Lose G8</text>
-  <text class="tm" x="449" y="519">Win G9</text>
-</g><g>
-  <text class="glabel" x="664" y="393">G13 · Losers' R5</text>
+  <line class="div" x1="440" y1="504" x2="610" y2="504"/>
+  <text class="tm" data-g="G12" data-slot="0" x="449" y="498">Lose G8</text>
+  <text class="sc" data-g="G12" data-slot="0" x="601" y="498" text-anchor="end"></text>
+  <text class="tm" data-g="G12" data-slot="1" x="449" y="519">Win G9</text>
+  <text class="sc" data-g="G12" data-slot="1" x="601" y="519" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="664" y="393">G13 &middot; Losers' R5</text>
   <rect class="box lb" x="660" y="398" width="170" height="44" rx="7"/>
-  <line class="div" x1="660" y1="420.0" x2="830" y2="420.0"/>
-  <text class="tm" x="669" y="414">Lose G7</text>
-  <text class="tm" x="669" y="435">Win G11</text>
-</g><g>
-  <text class="glabel" x="884" y="435">G14 · Losers' Semifinal</text>
+  <line class="div" x1="660" y1="420" x2="830" y2="420"/>
+  <text class="tm" data-g="G13" data-slot="0" x="669" y="414">Lose G7</text>
+  <text class="sc" data-g="G13" data-slot="0" x="821" y="414" text-anchor="end"></text>
+  <text class="tm" data-g="G13" data-slot="1" x="669" y="435">Win G11</text>
+  <text class="sc" data-g="G13" data-slot="1" x="821" y="435" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="884" y="435">G14 &middot; Losers' Semifinal</text>
   <rect class="box lb" x="880" y="440" width="170" height="44" rx="7"/>
-  <line class="div" x1="880" y1="462.0" x2="1050" y2="462.0"/>
-  <text class="tm" x="889" y="456">Win G12</text>
-  <text class="tm" x="889" y="477">Win G13</text>
-</g><g>
-  <text class="glabel" x="1104" y="435">G15 · Losers' Final</text>
+  <line class="div" x1="880" y1="462" x2="1050" y2="462"/>
+  <text class="tm" data-g="G14" data-slot="0" x="889" y="456">Win G12</text>
+  <text class="sc" data-g="G14" data-slot="0" x="1041" y="456" text-anchor="end"></text>
+  <text class="tm" data-g="G14" data-slot="1" x="889" y="477">Win G13</text>
+  <text class="sc" data-g="G14" data-slot="1" x="1041" y="477" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="1104" y="435">G15 &middot; Losers' Final</text>
   <rect class="box lb" x="1100" y="440" width="170" height="44" rx="7"/>
-  <line class="div" x1="1100" y1="462.0" x2="1270" y2="462.0"/>
-  <text class="tm" x="1109" y="456">Win G14</text>
-  <text class="tm" x="1109" y="477">Lose G10</text>
-</g><g>
-  <text class="glabel" x="1309" y="295">G16 · CHAMPIONSHIP</text>
+  <line class="div" x1="1100" y1="462" x2="1270" y2="462"/>
+  <text class="tm" data-g="G15" data-slot="0" x="1109" y="456">Win G14</text>
+  <text class="sc" data-g="G15" data-slot="0" x="1261" y="456" text-anchor="end"></text>
+  <text class="tm" data-g="G15" data-slot="1" x="1109" y="477">Lose G10</text>
+  <text class="sc" data-g="G15" data-slot="1" x="1261" y="477" text-anchor="end"></text>
+</g>
+<g>
+  <text class="glabel" x="1309" y="295">G16 &middot; CHAMPIONSHIP</text>
   <rect class="box fin" x="1305" y="300" width="170" height="44" rx="7"/>
-  <line class="div" x1="1305" y1="322.0" x2="1475" y2="322.0"/>
-  <text class="tm" x="1314" y="316">Win G10</text>
-  <text class="tm" x="1314" y="337">Win G15</text>
+  <line class="div" x1="1305" y1="322" x2="1475" y2="322"/>
+  <text class="tm" data-g="G16" data-slot="0" x="1314" y="316">Win G10</text>
+  <text class="sc" data-g="G16" data-slot="0" x="1466" y="316" text-anchor="end"></text>
+  <text class="tm" data-g="G16" data-slot="1" x="1314" y="337">Win G15</text>
+  <text class="sc" data-g="G16" data-slot="1" x="1466" y="337" text-anchor="end"></text>
 </g>
 </svg></div>
 
   <div class="notes">
     <b>Notes</b>
     <ul>
-      <li><b>Double elimination</b> — every team is guaranteed at least 2 games; out after the 2nd loss.</li>
+      <li><b>Double elimination</b> &mdash; every team is guaranteed at least 2 games; out after the 2nd loss.</li>
       <li><b>90-minute slots</b>, first pitch 10:00 AM both days.</li>
       <li><b>1:00 PM Saturday:</b> everything pauses for the Special Olympics unified game.</li>
       <li><b>41 (Stern/Streeter's)</b> opens at 11:30 Saturday.</li>
@@ -222,8 +274,67 @@
     </ul>
   </div>
 
-  <div class="foot">tawaswomenstournament.com · All proceeds benefit Special Olympics &#128153; · Draft — please don't share publicly yet.</div>
+  <div class="foot">tawaswomenstournament.com &middot; All proceeds benefit Special Olympics &#128153;</div>
 
 </div>
+
+<script src="bracket-logic.js"></script>
+<script>
+(function(){
+  var B = window.BRACKET;
+  var demo = /[?&]demo/.test(location.search);
+  var state = { results: {}, updated: 0 };
+  var DEMO = {
+    G1:{sa:12,sb:5,w:'a',final:true}, G2:{sa:8,sb:9,w:'b',final:true},
+    G3:{sa:15,sb:2,w:'a',final:true}, G4:{sa:10,sb:3,w:'a',final:true},
+    G5:{sa:11,sb:7,w:'a',final:true}, G6:{sa:6,sb:14,w:'b',final:true},
+    G7:{sa:9,sb:5,w:'a',final:true}, G8:{sa:4,sb:6,w:'b',final:true}
+  };
+
+  function q(sel){ return document.querySelector(sel); }
+
+  function setSide(g, idx, info){
+    var tm = q('svg text.tm[data-g="'+g+'"][data-slot="'+idx+'"]');
+    if (tm){ tm.textContent = info.withSeed; tm.classList.toggle('win', info.isWin); }
+    var sc = q('svg text.sc[data-g="'+g+'"][data-slot="'+idx+'"]');
+    if (sc){ sc.textContent = info.score != null ? String(info.score) : ''; sc.classList.toggle('win', info.isWin); }
+    var mt = q('span.mt[data-g="'+g+'"][data-slot="'+idx+'"]');
+    if (mt){ mt.textContent = info.noSeed; mt.classList.toggle('win', info.isWin); mt.classList.toggle('dim', info.res.name == null); }
+  }
+
+  function apply(){
+    B.GAMES.forEach(function(gm){
+      var g = gm.g;
+      var s0 = B.sideInfo(g, 0, state.results);
+      var s1 = B.sideInfo(g, 1, state.results);
+      setSide(g, 0, s0); setSide(g, 1, s1);
+      var scln = q('span.scln[data-g="'+g+'"]');
+      if (scln){ scln.textContent = (s0.score != null && s1.score != null) ? ('  ' + s0.score + '\u2013' + s1.score) : ''; }
+    });
+  }
+
+  function status(){
+    var chip = document.getElementById('livechip');
+    if (!chip) return;
+    if (demo){ chip.innerHTML = '<span class="dot"></span>Demo preview \u2014 sample scores'; chip.classList.add('on'); return; }
+    var any = state.results && Object.keys(state.results).length > 0;
+    if (!any){ chip.textContent = 'Live scores will appear here during the tournament weekend.'; chip.classList.remove('on'); return; }
+    var secs = state.updated ? Math.max(0, Math.round((Date.now() - state.updated) / 1000)) : 0;
+    var ago = secs < 90 ? (secs + 's ago') : (Math.round(secs / 60) + 'm ago');
+    chip.innerHTML = '<span class="dot"></span>Live \u2014 updated ' + ago;
+    chip.classList.add('on');
+  }
+
+  function load(){
+    if (demo){ state.results = DEMO; state.updated = Date.now(); apply(); status(); return; }
+    fetch('/api/results', { cache: 'no-store' }).then(function(r){ return r.json(); }).then(function(d){
+      state.results = (d && d.results) || {}; state.updated = (d && d.updated) || 0; apply(); status();
+    }).catch(function(){ apply(); status(); });
+  }
+
+  load();
+  if (!demo){ setInterval(load, 30000); setInterval(status, 15000); }
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+# Local Wrangler / Pages dev state — never deploy this
+.wrangler/
+node_modules/
+.DS_Store
