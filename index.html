@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tawas Women's Softball Tournament — 55th Annual · Sept 12–13, 2026</title>
 <meta name="description" content="The 55th Annual Tawas Women's Softball Tournament — September 12–13, 2026 at Dewey Durant Field, East Tawas, MI. All proceeds benefit Special Olympics. Bring a team, make a weekend of it.">
-<meta property="og:title" content="Tawas Women's Softball Tournament — Sept 12–13, 2026">
-<meta property="og:description" content="55 years strong. A weekend of softball on Lake Huron, all for Special Olympics. Register your team.">
+<meta property="og:title" content="Tawas Women's Softball Tournament — $1,900 for Special Olympics">
+<meta property="og:description" content="The 55th Annual tournament is in the books! Thank you to every team — together we raised $1,900 for Special Olympics. Congrats to our 2026 champions, Crank's Catering. See you in 2027!">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tawaswomenstournament.com/">
-<meta property="og:image" content="https://tawaswomenstournament.com/images/og-card.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Tawas Women's Softball Tournament — Sept 12-13, 2026, East Tawas MI, benefiting Special Olympics">
+<meta property="og:image" content="https://tawaswomenstournament.com/images/Cranks2026_Champs.jpg">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1536">
+<meta property="og:image:alt" content="Crank's Catering, 2026 Tawas Women's Softball Tournament champions">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tawas Women's Softball Tournament — Sept 12–13, 2026">
-<meta name="twitter:description" content="55 years strong. A weekend of softball on Lake Huron, all for Special Olympics. Register your team.">
-<meta name="twitter:image" content="https://tawaswomenstournament.com/images/og-card.jpg">
+<meta name="twitter:title" content="Tawas Women's Softball Tournament — $1,900 for Special Olympics">
+<meta name="twitter:description" content="The 55th Annual tournament is in the books! Together we raised $1,900 for Special Olympics. Congrats to our 2026 champions, Crank's Catering.">
+<meta name="twitter:image" content="https://tawaswomenstournament.com/images/Cranks2026_Champs.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -134,6 +134,26 @@
   @media(max-width:600px){ .gallery{columns:2} }
   .gallery img{width:100%;margin-bottom:12px;border-radius:10px;break-inside:avoid;box-shadow:var(--shadow)}
 
+  /* 2026 RECAP / DONATION */
+  .recap{background:linear-gradient(135deg,#f7efdd,#fffdf8);border-bottom:1px solid var(--line);text-align:center}
+  .recap h2{font-size:clamp(28px,4.2vw,44px);text-transform:uppercase;color:var(--green-dk)}
+  .recap .lead{max-width:820px;margin:0 auto 32px}
+  .recap .lead b{color:var(--green)}
+  .recap-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:stretch;text-align:left;margin-top:8px}
+  @media(max-width:820px){ .recap-grid{grid-template-columns:1fr} }
+  .champ-2026{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);color:#fff;display:flex;align-items:flex-end;min-height:360px}
+  .champ-2026 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+  .champ-2026 .cap{position:relative;z-index:2;padding:24px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.82));width:100%}
+  .champ-2026 .cap .eyebrow{color:var(--gold)}
+  .champ-2026 .cap h3{font-size:clamp(24px,3.4vw,34px);text-transform:uppercase;margin:.1em 0 .08em;color:#fff}
+  .champ-2026 .cap p{margin:0;font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:#f4e8cf}
+  .recap-side{display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .donation-callout{background:linear-gradient(135deg,var(--green-dk),var(--green));color:#fff;border-radius:16px;padding:26px;text-align:center;box-shadow:var(--shadow)}
+  .donation-callout .d-label{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:#dcecdf;display:block}
+  .donation-callout .d-amount{font-family:"Anton",sans-serif;font-size:clamp(46px,8vw,66px);color:var(--gold);display:block;line-height:1;margin:6px 0}
+  .donation-callout .d-sub{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:#dcecdf}
+  .recap-side p{color:var(--muted);margin:0;font-size:15px}
+
   /* CTA band */
   .cta-band{background:var(--gold);color:#3a2a06;text-align:center}
   .cta-band h2{color:#3a2a06;font-size:clamp(28px,4.4vw,46px);text-transform:uppercase}
@@ -153,6 +173,7 @@
   <div class="wrap">
     <a class="brand" href="#top"><span class="dot"></span>Tawas Softball</a>
     <nav>
+      <a href="#recap">2026 Recap</a>
       <a href="#tournament">The Tournament</a>
       <a href="#special-olympics">Special Olympics</a>
       <a href="rules.html">Rules</a>
@@ -182,6 +203,30 @@
       <a class="btn ghost" href="#weekend">Make a weekend of it</a>
     </div>
     <div class="so-tag"><span class="heart">♥</span> All proceeds benefit Special Olympics</div>
+  </div>
+</section>
+
+<!-- 2026 RECAP / DONATION CELEBRATION -->
+<section class="recap" id="recap">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-dk)">That's a wrap — 2026 is in the books</div>
+    <h2>55 years strong — and every dollar goes home to Special Olympics.</h2>
+    <p class="lead">Thank you to every team, family, volunteer, and umpire who made the 55th Annual Tawas Women's Softball Tournament a weekend to remember. Because of all of you, we're proud to donate <b>$1,900 to Special Olympics</b> this year — raised through your entry fees, the concession stand, and the t-shirt table. And the moment we look forward to most, the Saturday unified game with our Special Olympics athletes, was the heart of it all over again.</p>
+    <div class="recap-grid">
+      <div class="champ-2026">
+        <img src="images/Cranks2026_Champs.jpg" alt="Crank's Catering, the 2026 Tawas Women's Softball Tournament champions, celebrating on the field">
+        <div class="cap"><div class="eyebrow">🏆 2026 Champions</div><h3>Crank's Catering</h3><p>Undefeated all weekend</p></div>
+      </div>
+      <div class="recap-side">
+        <div class="donation-callout">
+          <span class="d-label">Raised for Special Olympics</span>
+          <b class="d-amount">$1,900</b>
+          <span class="d-sub">2026 Tournament</span>
+        </div>
+        <p>Congratulations to Crank's Catering, and to runner-up Amrize for a heck of a comeback. See you all in 2027!</p>
+        <a class="btn green" href="bracket.html">See the final bracket &amp; results →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -299,7 +344,7 @@
     </div>
     <div class="champ-feature">
       <img src="images/champs.jpg" alt="The Good Vibrations team celebrating their championship on the field">
-      <div class="cap"><div class="eyebrow">🏆 Reigning champions</div><h3>Good Vibrations · 2025</h3></div>
+      <div class="cap"><div class="eyebrow">🏆 2025 Champions</div><h3>Good Vibrations</h3></div>
     </div>
     <div class="gallery">
       <img src="images/cow.jpg" alt="A player in a cow costume">
@@ -345,8 +390,14 @@
   (function(){
     var target = new Date(2026, 8, 12, 9, 0, 0);
     var el = document.getElementById('countdown');
+    // Once the 2026 tournament has wrapped, celebrate instead of counting to a past date.
+    var wrapped = new Date(2026, 8, 14, 0, 0, 0); // end of tournament weekend
     function tick(){
       var now = new Date();
+      if (now >= wrapped){
+        el.innerHTML = '<div class="cd-box" style="min-width:auto;padding:12px 20px"><b style="font-size:22px">🏆 That\'s a wrap!</b><span>Thank you — see you in 2027</span></div>';
+        return;
+      }
       var diff = Math.max(0, target - now);
       var d = Math.floor(diff/86400000);
       var h = Math.floor(diff%86400000/3600000);
