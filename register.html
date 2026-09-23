@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Register your team — Tawas Women's Softball Tournament 2026</title>
-<meta name="description" content="Register your team for the 55th Annual Tawas Women's Softball Tournament, September 12–13, 2026.">
+<title>Registration — Tawas Women's Softball Tournament</title>
+<meta name="description" content="Registration for the 2026 Tawas Women's Softball Tournament is closed. 2027 dates coming soon — email us to be notified.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Register your team — Tawas Women's Softball Tournament">
-<meta property="og:description" content="Sign up your team for the 55th Annual Tawas Women's Softball Tournament, Sept 12–13, 2026. All proceeds benefit Special Olympics.">
+<meta property="og:title" content="Registration — Tawas Women's Softball Tournament">
+<meta property="og:description" content="Registration for 2026 is closed. The tournament raised $1,900 for Special Olympics — 2027 dates coming soon. Email us to be notified.">
 <meta property="og:url" content="https://tawaswomenstournament.com/register">
 <meta property="og:image" content="https://tawaswomenstournament.com/images/og-card.jpg">
 <meta property="og:image:width" content="1200">
@@ -58,8 +58,10 @@
   input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(31,107,67,.15)}
   textarea{min-height:90px;resize:vertical}
-  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .form-note{font-size:13px;color:var(--muted);margin-top:14px}
+  .closed-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px 30px;box-shadow:var(--shadow);text-align:center}
+  .closed-card h2{color:var(--green-dk);text-transform:uppercase;font-size:24px}
+  .closed-card p{color:var(--muted);margin:0 auto 22px;max-width:440px}
 
   .alert{padding:24px;border-radius:14px;margin-top:6px}
   .alert.ok{background:#e7f6ec;border:1px solid var(--green)}
@@ -81,53 +83,17 @@
 
 <main>
   <div class="wrap">
-    <div class="eyebrow">55th Annual · Sept 12–13, 2026</div>
-    <h1>Register your team</h1>
-    <p class="intro">Tell us a little about your team and we'll be in touch with payment details to lock you onto the official list. Takes about a minute.</p>
-    <div class="feechip">⏱ Entry fee $325 · registration closes September 1</div>
+    <div class="eyebrow">55th Annual · Bill Walsh Memorial</div>
+    <h1>Registration is closed</h1>
+    <p class="intro">The 55th Annual Tawas Women's Softball Tournament wrapped up September 12–13, 2026 — thank you to everyone who played and helped raise <b>$1,900 for Special Olympics</b>! 🥎</p>
 
-    <form id="reg-form" action="https://formsubmit.co/f49d71f553207d16925b70bf58477c51" method="POST">
-      <div class="field">
-        <label for="team">Team name <span class="req">*</span></label>
-        <input type="text" id="team" name="Team name" required autocomplete="organization">
-      </div>
+    <div class="closed-card">
+      <h2>Want in for 2027?</h2>
+      <p>We'll post next year's dates right here as soon as they're set. Send us a note and we'll make sure you're the first to know when registration opens.</p>
+      <a class="btn green" href="mailto:tawassoftballtourney@gmail.com?subject=Tawas%202027%20%E2%80%94%20Keep%20me%20posted&body=Hi%20Ashley%2C%20please%20let%20me%20know%20when%202027%20registration%20opens.%20Our%20team%3A%20">Email us to be notified →</a>
+    </div>
 
-      <div class="field">
-        <label for="manager">Manager name <span class="req">*</span></label>
-        <input type="text" id="manager" name="Manager name" required autocomplete="name">
-      </div>
-
-      <div class="field row2" style="margin-bottom:18px">
-        <div>
-          <label for="email">Your email <span class="req">*</span></label>
-          <input type="email" id="email" name="Email" required autocomplete="email">
-        </div>
-        <div>
-          <label for="phone">Phone <span class="req">*</span></label>
-          <input type="tel" id="phone" name="Phone" required autocomplete="tel">
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="city">League / home city</label>
-        <input type="text" id="city" name="League/City" autocomplete="address-level2">
-      </div>
-
-      <div class="field">
-        <label for="notes">Anything else? (optional)</label>
-        <textarea id="notes" name="Notes" placeholder="Questions, returning team, sponsor name, etc."></textarea>
-      </div>
-
-      <!-- FormSubmit config -->
-      <input type="hidden" name="_subject" value="🥎 New Tawas 2026 team registration">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://tawaswomenstournament.com/thanks">
-      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-      <button type="submit" class="btn green" id="submit-btn" style="width:100%;padding:15px">Send registration</button>
-      <p class="form-note">We only use your info to run the tournament — no spam, ever. Prefer email? Write us at <a href="mailto:tawassoftballtourney@gmail.com?subject=Tawas%202026%20%E2%80%94%20Team%20Registration">tawassoftballtourney@gmail.com</a>.</p>
-    </form>
+    <p class="form-note" style="margin-top:26px;text-align:center"><a href="index.html">← Back to home</a> &nbsp;·&nbsp; <a href="bracket.html">See the 2026 results</a></p>
 
   </div>
 </main>
